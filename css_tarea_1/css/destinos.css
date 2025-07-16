@@ -1,0 +1,13 @@
+/* ======= TABLA DE DESTINOS ======= */
+table {
+    margin: 30px auto;
+    background-color: #1f1f1f;
+    border-collapse: collapse;
+    text-align: center;
+    color: white;
+}
+
+td {
+    padding: 15px;
+    border: 1px solid;
+}

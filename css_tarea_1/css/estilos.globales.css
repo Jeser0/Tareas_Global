@@ -1,0 +1,54 @@
+/* ========== CONFIGURACIÓN GENERAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== ESTILOS GENERALES ========== */
+body {
+    background-color: #121212;  /* fondo oscuro */
+    color: #f0f0f0;             /* texto claro */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* ========== ENCABEZADO ========== */
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ========== MENÚ DE NAVEGACIÓN ========== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    color: #4fc3f7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ========== TÍTULOS ========== */
+h1, h2, h3 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* ========== PIE DE PÁGINA ========== */
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
