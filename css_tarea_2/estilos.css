@@ -1,0 +1,121 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía global */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Barra de navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #111;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  text-align: center;
+  background-color: #111;
+  padding: 10px 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Sección Home */
+.home {
+  height: 100vh;
+  background-image: url('https://via.placeholder.com/1920x1080');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 120px;
+  color: white;
+}
+
+.contenido-home h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.contenido-home p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Sección de tarjetas */
+.tarjetas {
+  width: 100%;
+  text-align: center;
+}
+.tarjeta {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  vertical-align: top;
+  color: white;
+}
+
+.tarjeta:nth-child(1) {
+  background-image: url('../css_tarea_2/assets/Reparados.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.tarjeta:nth-child(2) {
+  background-image: url('../css_tarea_2/assets/Accesorios.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.tarjeta:nth-child(3) {
+  background-image: url('../css_tarea_2/assets/Garantia.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.tarjeta:nth-child(4) {
+  background-image: url('../css_tarea_2/assets/Express.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.filtro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.contenido-tarjeta {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}

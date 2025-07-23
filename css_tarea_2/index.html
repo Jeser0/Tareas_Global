@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Zero Repair</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    /* Carrusel */
+    .carousel {
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .slide {
+      height: 100vh;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    .slide .texto-slide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* Dropdown */
+    .navbar li {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 999;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 10px;
+      display: block;
+      text-align: left;
+      text-decoration: none;
+    }
+    .navbar li:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li>
+          <a href="#">Nosotros</a>
+          <div class="dropdown-content">
+            <a href="#">Misión</a>
+            <a href="#">Visión</a>
+            <a href="#">Equipo</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Servicios</a>
+          <div class="dropdown-content">
+            <a href="#">Reparación</a>
+            <a href="#">Accesorios</a>
+          </div>
+        </li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="carousel">
+  <div class="slide active" style="background-image: url('assets/Reparados.jpg');">
+    <div class="texto-slide">
+      <h1>Bienvenidos a mi tienda de reparación de celulares</h1>
+      <p>Reparamos, mejoramos y cuidamos tu equipo como si fuera nuestro.</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('assets/accesoriosorden.jpg');">
+    <div class="texto-slide">
+      <h1>Accesorios Originales</h1>
+      <p>Fundas, cables, cargadores y más</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('assets/garantia.jpg');">
+    <div class="texto-slide">
+      <h1>Garantía en Reparaciones</h1>
+      <p>Confiá en nuestro servicio profesional</p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="tarjetas">
+    <div class="tarjeta">
+      <div class="filtro"></div>
+      <div class="contenido-tarjeta">
+        <h2>Celulares Reparados</h2>
+        <p>Equipos nuevos listos para venta o retiro</p>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="filtro"></div>
+      <div class="contenido-tarjeta">
+        <h2>Accesorios y Repuestos</h2>
+        <p>Contamos con cables, fundas, cargadores y repuestos originales.</p>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="filtro"></div>
+      <div class="contenido-tarjeta">
+        <h2>Garantía por 90 Días</h2>
+        <p>Confiamos en nuestro trabajo. Todas las reparaciones tienen garantía.</p>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="filtro"></div>
+      <div class="contenido-tarjeta">
+        <h2>Reparaciones Express</h2>
+        <p>En solo 24 hs solucionamos pantallas, baterías y más.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>
